@@ -1,0 +1,583 @@
+/* ------------ variables -------------- */
+:root{
+ --primary-color:#e14b5a;
+ --text-color:#777;
+ --title-color:#141313;
+ --border-color:#201f1f17;
+--gradient-color: linear-gradient(90deg,#ffd037 30%,#ee1144 70%);
+
+ --shadow-color: 0px 10px 30px rgba(118,85,225,0.3);
+ --box-shadow:0px 10px 30px rgba(57,56,61,0.205);
+ --fontRoboto: 'Roboto', sans-serif;
+ --bgcolorgrey: rgba(255, 255, 255, 0.835);
+ --Lexend:'Lexend',cursive;
+}
+
+/* ---- css reset -----*/
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+/* ----- end css reset  */
+
+/* ----- global css stylee  -------------*/
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow:auto;
+    padding : 0 2rem;
+
+}
+body{
+    font-family: var(--fontRoboto);
+}
+section h1{
+    padding: 1rem 0;
+    font-family: var(--fontRoboto);
+    font-size: 35px;
+    color: var(--title-color);
+}
+img{
+    width: 100%;
+    display: block;
+}
+
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.btn{
+     display: inline-block;
+
+     border-radius:4px;
+     padding: 1rem 2rem; 
+     font: normal 500 16px/20px var(--fontRoboto);
+     border: 3px solid transparent;
+     color : whitesmoke;
+
+     
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+/* --------- end global css ------------*/
+
+/* ----- header ---- */
+/* ------ nav ------ */
+nav{
+    position: sticky;
+    top:0;
+    z-index:1000;
+}
+ header nav {
+     display: flex;  
+     justify-content: space-around;
+     background: whitesmoke;
+     padding: 10px;
+ }
+
+ header nav ul{
+     display: flex;
+   
+ }
+ header nav ul li{
+transition: all 0.4s linear;
+
+ }
+ header nav ul li:hover{
+transform: translateX(15px);
+}
+
+
+ header nav ul li a{
+     padding-right: 35px;
+     font-size:1.3rem;
+     text-transform: uppercase;
+     font-family: var(--fontRoboto);
+     color: black;
+     transition: all 0.2s ease-in;
+ }
+header nav ul li a:hover{
+   content: '';
+   display: block;
+   border-bottom: 1.5px solid var(--primary-color);
+   width: 70%;
+}
+ 
+
+.nav-close{
+    display: none;
+}
+
+
+ #logo h1{
+	font-family:var(--Lexend);
+	font-size:2rem;
+ }
+/* -------- end nav -------- */
+
+/* ------------- header main ------------ */
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    position: relative;
+}
+.title{
+ margin:30% 0 0 10%;
+
+}
+.title h3:after{
+    content: "";
+    display:inline-block;
+    height: 2px;
+    width: 16vw;
+    background-color:black;
+    margin-left:3%;
+    transform: translateY(-10px);
+
+}
+.title h1{
+     font-size:2rem;
+animation: slidefromright 7s ease-in-out 1;
+}
+
+@keyframes slidefromright {
+    0% {
+        transform: translateX(-400px);
+    }
+    50% {
+        transform: translateX(100px);
+    }
+    80% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+
+.title-text{
+    text-transform: uppercase;
+    font: normal bold 50px/72px var(--fontRoboto);
+ }  
+.title h4{
+    font-size: 1.2rem;
+}
+.sociaux i {
+
+    color: whitesmoke;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    background: #6c63ff;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+.sociaux i:hover {
+    background: #ec4357;
+    color: whitesmoke;
+}
+/* .sociaux .btn:hover {
+    background: #6c63ff;
+    color: #ced2eb;
+} */
+.image-main{
+    position: relative;
+}
+.sociaux{
+    position: sticky;
+     bottom:15%;
+    max-width: 50rem;
+    margin: auto;
+    text-align: center;
+
+   
+}
+
+ .btn-hire-me{
+    background: var(--gradient-color);
+    background-clip: padding-box;
+    box-shadow: var(--box-shadow);
+    transition: background .6s ease;
+ }
+
+ .btn-hire-me:hover{
+  background : whitesmoke;
+  background-clip : padding - box;
+   color : black;
+
+ }
+ .btn-cv{
+    background:#6c63ff;
+     background-clip: padding-box;
+     
+ }
+
+ .btn-cv:hover{
+     background: var(--gradient-color);
+     color: whitesmoke;
+     box-shadow: var(--box-shadow);
+ }
+/* -------------- end header main ------------*/
+
+/* --------------- about ----------------- */
+
+#about .bloc{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+}
+
+#about{
+    margin-top: 2rem;
+}
+#about .about-myself{
+animation: slidefromleft 2s ease-in-out 1;
+
+}
+@keyframes slidefromleft {
+    0% {
+        transform: translateX(1000px);
+    }
+    50% {
+        transform: translateX(200px);
+    }
+    100%{
+transform: translateX(0);
+
+    }
+   
+}
+
+#about .about-img{
+    animation: opacty 5s ease-out;
+}
+@keyframes opacty {
+    0% {
+        opacity: 0;
+    }
+    50% {
+opacity: 0.5;
+
+    }
+    100% {
+       opacity: 1;
+
+    }
+
+}
+
+
+
+.paragraph{
+    max-width:350px;
+}
+.paragraph p{
+    padding:10px;
+}
+.paragraph h2>span{
+display: block; 
+font: normal bold 49px/60px var(--fontRoboto);
+letter-spacing:10px;
+}
+.paragraph p{
+   color: var(--text-color); 
+}
+.paragraph .signature{
+    font-family: 'Sacramento', serif;
+    text-align: justify;
+    margin-right: 0.3rem;
+}
+.tel{
+    color: green;
+}
+.number{
+    color: green;
+    text-decoration: underline;
+    
+}
+
+/* --------------  end about -------------- */
+
+
+/* -------------- services --------------- */
+.services-items{
+ display: grid;
+ grid-template-columns: repeat(4,1fr);
+ grid-gap: 1.3rem;
+animation: opacty 5s ease-in-out;
+
+}
+.item{
+    text-align: center;
+
+}
+.item img{
+width:30%;
+margin: 0 auto;
+}
+#services{
+    margin-top: 2rem;
+
+}
+.title-service{
+    font-family: var(--fontRoboto);
+    padding-bottom: 1.2rem;
+    font-size: 35px;
+    color: var(--title-color);
+}
+
+#services p{
+    padding-bottom: 1.2rem;
+  color: var(--text-color);
+}
+#services .item{
+    background: rgba(248, 252, 253,0.973);
+    padding: 2rem 0;
+    width: 16rem;
+    transition: box-shadow .7s ease;
+}
+#services .item:hover{
+    box-shadow: var(--box-shadow);
+}
+#services .item img{
+    padding-bottom: 1rem;
+}
+#services .item h4{
+     padding-bottom: 1rem;
+     text-transform: uppercase;
+     font:600;
+}
+
+
+
+
+
+/* --------------- end services ------------ */
+
+/* mes competences */
+#Skill {
+    margin-top:2rem;
+    background: #fff;
+
+}
+.skill-items{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-gap: 1.3rem;
+  
+}
+
+
+ #Skill h2 {
+font-family: var(--fontRoboto);
+padding-bottom: 1.2rem;
+font-size: 35px;
+color: var(--title-color);
+ text-align: center;
+ letter-spacing: 1.3px;
+}
+
+
+
+.flex {
+    display: flex;
+    align-content: center;
+    background-color: white;
+    margin-bottom: 1.2rem;
+    padding: 1.2rem;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+.pourcent {
+    size: 40rem;
+    font-weight: 700;
+    height: 6.25rem;
+    color: #ccc;
+    margin-top: 1rem;
+}
+.flex .progresscontainer {
+    flex-basis: 100%;
+    padding-left: 2.2rem;
+    margin-top: 1.56rem;
+}
+
+.progresscontainer strong {
+    size: 2rem;
+    font-weight: 700rem;
+    height: 1.25rem;
+    color: var(--text-color);
+}
+
+.progress {
+    margin-top: 1rem;
+    border-radius: 0;
+    background-color: #656565;
+}
+.flex .progress-bar {
+    height: 1.125rem;
+    background-color: var(--primary-color);
+}
+.pourcent .pourcentage {
+    font-size: 1.8rem;
+    font-weight: 600;
+    height: 6rem;
+    color: #ccc;
+}
+
+/* --------- end of progress */
+
+
+/* --------- projects-------------------- */
+
+.project-img{
+ display: grid;
+ grid-template-columns: repeat(4,1fr);
+ margin-top:2rem;
+ grid-gap: 0.5rem;
+}
+
+
+
+.button-group{
+    margin: 1rem;
+}
+.button-group a{
+    text-transform: uppercase;
+    color: var(--text-color);
+    border: none;
+    background: transparent;
+    padding: 1.2rem;
+    font-family: var(--fontRoboto);
+    cursor: pointer;
+}
+.button-group a.active{
+    background:#6c63ff;
+   background-clip: padding-box;
+   color: whitesmoke;
+}
+.button-group a:hover,
+.button-group a:active{
+    background: var(--gradient-color);
+    background-clip: padding-box;
+    box-shadow: var(--box-shadow);
+    color: whitesmoke;
+}
+.img-s{
+    width: 100%;
+}
+.img-s:hover{
+    transform: scale(1.5);
+   transition: all 1s ease-in-out;
+}
+
+
+
+
+
+
+
+/* ---------------- end of projects---------- */
+
+/* contact */
+
+.form-contact{
+    background: url('../images/subscribe-bg.png');
+    height:70vh;
+    text-align: center;
+    background-size: cover;
+    margin-top: 2px;
+}
+.form-contact .input-textbox input{
+    display: block;
+    margin: 0 auto;
+    width: 20rem;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem;
+    font: var(--fontRoboto);
+} 
+.form-contact .input-textbox  textarea{
+border-radius: 6px;
+padding: 0.5rem;
+font: var(--fontRoboto);
+width: 20rem;
+
+
+
+}
+
+
+.form-contact .input-textbox input:invalid{
+    background: #ee1144;
+}
+.form-contact h1{
+   margin:5px;
+ 
+}  
+.form-contact .button{
+     margin: 0;
+}
+
+
+
+ /* --------- footer--------- */
+ #footer{
+     background: var(--primary-color);
+     margin-top: 1rem;
+      color:whitesmoke;
+ }
+ #footer h1{
+font-family: var(--Lexend);
+font-size: 2rem;
+color : whitesmoke;
+
+
+ }
+ #footer div{
+     display: flex;
+     text-align: center;
+     justify-content: space-around;
+     align-items: center;
+    color : whitesmoke;
+
+ }
+#footer div .sociaux-footer i {
+color: whitesmoke;
+font-size: 1rem;
+border: 1px solid white;
+border-radius: 50%;
+background: transparent;
+margin-right: 0.5rem;
+padding: 0.85rem;
+}
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+

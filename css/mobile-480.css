@@ -1,0 +1,17 @@
+/* services */
+:root{
+    --column-1:repeat(1,1fr);
+}
+.services-items{
+    grid-template-columns:var(--column-1);
+   padding-left: 5rem;
+}
+#about .bloc{
+    padding-left: 4rem;
+}
+#about .bloc .paragraph p{
+    text-align: left;
+}
+.button-group a{
+    display: block;
+}
