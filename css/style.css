@@ -532,6 +532,7 @@ width: 20rem;
 }  
 .form-contact .button{
      margin: 0;
+     cursor: pointer;
 }
 
 
